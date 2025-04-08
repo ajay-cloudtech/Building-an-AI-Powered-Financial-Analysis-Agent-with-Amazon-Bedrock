@@ -86,6 +86,6 @@ Deploy a Streamlit UI for interacting with the agent.
 - Execute: `streamlit run app/streamlit_app/app.py`.
 - Copy the external URL provided and open it in a browser to access the app.
 5. **Test the App**:
-- Use the example prompts provided earlier to test functionality. If an error occurs on the first try, retry the prompt.
+- Use example prompts to test functionality. `Create a portfolio with 3 companies in the real estate industry`
 
 <img width="917" alt="image" src="https://github.com/user-attachments/assets/3586b364-a6dd-4153-9898-6ad7857d7a42" />
