@@ -1,7 +1,7 @@
 # Building-an-AI-Powered-Financial-Analysis-Agent-with-Amazon-Bedrock
 
 ## Summary
-This project guides you through the process of creating an AI-driven financial analysis agent using Amazon Bedrock. By leveraging large language models (LLMs), CloudFormation templates, and a knowledge base synced with Federal Open Market Committee (FOMC) reports, this agent can analyze economic trends, generate company portfolios, and provide actionable insights. The setup includes deploying AWS resources, integrating a knowledge base, and launching a Streamlit-based user interface on an EC2 instance. The result is a powerful tool for exploring financial data and economic policies through natural language prompts.
+This project guides you through the process of creating an AI-driven financial analysis agent using Amazon Bedrock with Retrieval-Augmented Generation (RAG). By leveraging large language models (LLMs), CloudFormation templates, and a knowledge base synced with Federal Open Market Committee (FOMC) reports, this agent can retrieve relevant data to analyze economic trends, generate company portfolios, and provide actionable insights. The setup includes deploying AWS resources, integrating a knowledge base, and launching a Streamlit-based user interface on an EC2 instance. The result is a powerful tool for exploring financial data and economic policies through natural language prompts.
 
 <img width="347" alt="Bedrock_Model_Arch" src="https://github.com/user-attachments/assets/5093ad7e-286a-4369-940c-500572b35dd6" />
 
@@ -89,3 +89,14 @@ Deploy a Streamlit UI for interacting with the agent.
 - Use example prompts to test functionality. `Create a portfolio with 3 companies in the real estate industry`
 
 <img width="917" alt="image" src="https://github.com/user-attachments/assets/3586b364-a6dd-4153-9898-6ad7857d7a42" />
+
+## Definitions
+- **Amazon Bedrock**: A managed service for building and scaling generative AI applications using foundation models.
+- **Agent**: An AI-powered entity in Bedrock that processes queries, retrieves data from a knowledge base, and executes actions like portfolio generation.
+- **Knowledge Base**: A repository of structured data (e.g., FOMC reports) that supports RAG by providing information for the agent to retrieve and use.
+- **Retrieval-Augmented Generation (RAG)**: A technique where an AI retrieves relevant data from a knowledge base to enhance the accuracy and context of its generated responses.
+- **CloudFormation**: An AWS service for provisioning and managing infrastructure as code through templates.
+- **Streamlit**: An open-source Python framework for creating interactive web applications with minimal coding.
+- **EC2 (Elastic Compute Cloud)**: An AWS service providing scalable virtual servers to host applications like the Streamlit UI.
+- **Large Language Model (LLM)**: An AI model (e.g., Claude 3 Haiku) trained on vast text data to understand and generate human-like responses.
+- **S3 (Simple Storage Service)**: An AWS object storage service used to store and retrieve data like the FOMC reports.
