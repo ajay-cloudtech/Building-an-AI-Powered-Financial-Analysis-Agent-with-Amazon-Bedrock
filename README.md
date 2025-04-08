@@ -26,8 +26,8 @@ To begin, you’ll need to enable access to the required large language models i
 Next, deploy the necessary AWS resources using provided CloudFormation templates (YAML files).
 
 1. **Download Templates**:
-   - [1 - S3_Dataload Stack](#): Creates an S3 bucket and uploads FOMC reports.
-   - [2 - Agent_Lambda Stack](#): Sets up an Amazon Bedrock agent, action group, and Lambda function.
+   - [1 - S3_Dataload Stack](https://github.com/ajay-cloudtech/Building-an-AI-Powered-Financial-Analysis-Agent-with-Amazon-Bedrock/blob/main/1-s3-dataload-template.yaml): Creates an S3 bucket and uploads FOMC reports.
+   - [2 - Agent_Lambda Stack](https://github.com/ajay-cloudtech/Building-an-AI-Powered-Financial-Analysis-Agent-with-Amazon-Bedrock/blob/main/2-bedrock-agent-lambda-template.yaml): Sets up an Amazon Bedrock agent, action group, and Lambda function.
 
 2. **Deploy via AWS CloudFormation**:
    - From the AWS Management Console, search for **CloudFormation** and navigate to the service.
@@ -72,7 +72,7 @@ Set up a knowledge base and integrate it with the Bedrock agent.
 Deploy a Streamlit UI for interacting with the agent.
 
 1. **Download Template**:
-- [3 - EC2_UI Stack](#): Deploys an EC2 instance for the Streamlit app.
+- [3 - EC2_UI Stack](https://github.com/ajay-cloudtech/Building-an-AI-Powered-Financial-Analysis-Agent-with-Amazon-Bedrock/blob/main/3-ec2-streamlit-template.yaml): Deploys an EC2 instance for the Streamlit app.
 2. **Deploy via CloudFormation**:
 - Navigate to **CloudFormation** in the AWS Management Console.
 - Select **Create stack** > **With new resources (standard)**.
