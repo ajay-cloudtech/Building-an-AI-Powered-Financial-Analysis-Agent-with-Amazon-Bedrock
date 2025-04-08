@@ -100,3 +100,22 @@ Deploy a Streamlit UI for interacting with the agent.
 - **EC2 (Elastic Compute Cloud)**: An AWS service providing scalable virtual servers to host applications like the Streamlit UI.
 - **Large Language Model (LLM)**: An AI model (e.g., Claude 3 Haiku) trained on vast text data to understand and generate human-like responses.
 - **S3 (Simple Storage Service)**: An AWS object storage service used to store and retrieve data like the FOMC reports.
+
+## How It Works
+
+When a user submits a prompt, such as `What were the key economic trends in January 2023?`, the system processes it as follows:
+
+1. **Prompt Received by the Agent**:  
+   The AI agent, hosted on Amazon Bedrock, captures the user’s query. It is powered by a large language model (e.g., Anthropic Claude 3 Haiku) to understand and respond to natural language inputs.
+
+2. **Retrieval-Augmented Generation (RAG) Engages**:  
+   To ensure accurate and data-driven responses, the agent employs Retrieval-Augmented Generation (RAG). Instead of relying solely on the LLM’s general knowledge, RAG retrieves relevant information from the knowledge base to augment the response.
+
+3. **Knowledge Base Query (Vector Search)**:  
+   - The knowledge base contains market data (e.g., economic reports) stored in an S3 bucket, converted into vector embeddings using Amazon Titan Embeddings G1 - Text.
+   - Bedrock manages the vector storage and retrieval,  leveraging Amazon OpenSearch Serverless as its backend. OpenSearch Serverless indexes these embeddings for efficient similarity searches.
+   - When the agent queries for “January 2023 trends,” the system performs a vector search to identify the most relevant data chunks—e.g., a report noting “inflation rose in January 2023”—and retrieves them for the agent.
+
+4. **Response Generation**:  
+   The agent combines the retrieved data with the user’s prompt and processes it through the LLM. Bedrock orchestrates this interaction, ensuring the model generates a precise and contextually relevant response, such as:  
+   `In January 2023, key economic trends included rising inflation and tighter monetary policies`
